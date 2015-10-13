@@ -16,7 +16,7 @@
   //Template
 
   var textInput = function textInput(obj) {
-    var template = '\n    <div class="text-input">\n    <input value="" type="' + obj.type + '" placeholder="' + obj.label + '" id="' + obj.id + '">\n    <i class="fa ' + obj.icon + '"></i>\n    </div>\n    ';
+    var template = '\n    <div class="text-input">\n    <input value="" type="' + obj.type + '" placeholder="' + obj.label + '" id="' + obj.id + '">\n    <i class="fa ' + obj.icon + '"></i>\n    <""\n\n    </div>\n    ';
     return template;
   };
 

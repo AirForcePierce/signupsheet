@@ -19,6 +19,8 @@
     <div class="text-input">
     <input value="" type="${obj.type}" placeholder="${obj.label}" id="${obj.id}">
     <i class="fa ${obj.icon}"></i>
+    <""
+
     </div>
     `;
     return template;
