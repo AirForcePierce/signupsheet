@@ -24,10 +24,10 @@
     var addedOptions = '';
 
     obj.options.forEach(function (options) {
-      addedOptions += '<option value="' + options.value + '" label="{options.label}"></option>';
+      addedOptions += '<option value="' + options.value + '">' + options.label + '</option>';
     });
 
-    var select = '\n    <div class="select-input">\n    <select type="' + obj.type + '" placeholder= "' + obj.label + '" id="' + obj.id + '">\n    <option value="">Select Language...</option>\n      $(addedOptions) \n    </select>\n    </div>\n    ';
+    var select = '\n    <div class="select-input">\n    <select type="' + obj.type + '" placeholder= "' + obj.label + '" id="' + obj.id + '">\n    <option value="">Select Language...</option>\n      ' + addedOptions + ' \n    </select>\n    </div>\n    ';
     return select;
   };
 
@@ -44,7 +44,7 @@
         htmlBlock = selectInput(item);
       }
 
-      $('.form').append(htmlBlock);
+      $('form').append(htmlBlock);
     });
   };
 })();

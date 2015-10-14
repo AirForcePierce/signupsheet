@@ -28,14 +28,14 @@
       let addedOptions = '';
 
       obj.options.forEach(function (options) {
-        addedOptions += `<option value="${options.value}" label="{options.label}"></option>`;
+        addedOptions += `<option value="${options.value}">${options.label}</option>`;
       });
 
     let select = `
     <div class="select-input">
     <select type="${obj.type}" placeholder= "${obj.label}" id="${obj.id}">
     <option value="">Select Language...</option>
-      $(addedOptions) 
+      ${addedOptions} 
     </select>
     </div>
     `;
@@ -57,7 +57,7 @@
         htmlBlock = selectInput(item);
       }
 
-      $('.form').append(htmlBlock);
+      $('form').append(htmlBlock);
 
     });
 
